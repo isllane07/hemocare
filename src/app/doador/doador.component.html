@@ -1,0 +1,57 @@
+<div class="container">
+  <header>
+    <img src="doacao.png" alt="logo">
+    <h2>HEMOCARE</h2>
+  </header>
+
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="formulario">
+    <div class="campo">
+      <label for="nome">Nome</label>
+      <input id="nome" formControlName="nome" type="text" placeholder="Nome" />
+    </div>
+    <div class="campo">
+      <label for="idade">Idade</label>
+      <input id="idade" formControlName="idade" type="number" placeholder="Idade" />
+    </div>
+    <div class="campo">
+      <label for="sexo">Sexo</label>
+      <input id="sexo" formControlName="sexo" type="text" placeholder="Sexo" />
+      </div>
+    <div class="campo">
+      <label for="telefone">Telefone</label>
+      <input id="telefone" formControlName="telefone" type="text" placeholder="Telefone" />
+    </div>
+    <div class="campo">
+      <label for="tipoSanguineo">Tipo Sanguíneo</label>
+      <input id="tipoSanguineo" formControlName="tipoSanguineo" type="text" placeholder="Tipo Sanguíneo" />
+    </div>
+    <div class="campo">
+      <label for="peso">Peso</label>
+      <input id="peso" formControlName="peso" type="text" placeholder="Peso">
+    </div>
+    <div class="campo">
+      <label for="dataDoacao" class="formControlName"> Data da última doação</label>
+      <input id="dataDoacao" formControlName="dataDoacao" type="date" placeholder="dataDoação">
+    </div>
+    <div class="campo">
+      <label for="fumante" class="formControlName">Você fuma?</label>
+      <input id="fumante" formControlName="fumante" type="text" placeholder="fumante">
+    </div>
+    <button type="submit" class="botao-submit">{{ editarDoador ? 'Atualizar' : 'Adicionar' }}</button>
+  </form>
+
+  <hr class="linha-separadora" />
+
+  
+  <h2>Doadores</h2>
+  <ul class="lista-doadores">
+    <li *ngFor="let doador of doadores" class="item-doador">
+      <span class="info-doador">{{ doador.nome }} - {{ doador.idade }} anos - {{doador.sexo}} - {{ doador.tipoSanguineo }} - {{ doador.telefone }} - {{doador.dataDoacao}} </span>
+      <div class="acoes">
+        <button (click)="editar(doador)" class="botao-editar">Editar</button>
+        <button (click)="remover(doador.id)" class="botao-remover">Remover</button>
+      </div>
+    </li>
+  </ul>
+</div>
