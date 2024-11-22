@@ -1,0 +1,13 @@
+<div class="container mt-5">
+    <h2>Lista de Doadores</h2>
+    <div class="list-group">
+      <div *ngFor="let doador of doadores" class="list-group-item">
+        <h5>{{ doador.nome }}</h5>
+        <p><strong>Tipo Sanguíneo:</strong> {{ doador.tipoSanguineo }}</p>
+        <p><strong>Telefone:</strong> {{ doador.telefone }}</p>
+        <p><strong>Data da Última Doação:</strong> {{ doador.dataDoacao }} | date:'dd/MM/yyyy' </p>
+        <button class="btn btn-info" (click)="verDetalhes(doador.id)">Ver Detalhes</button>
+      </div>
+    </div>
+  </div>
+  

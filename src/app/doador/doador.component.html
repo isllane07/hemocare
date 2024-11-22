@@ -1,0 +1,11 @@
+<div class="container mt-5">
+  <h2>Detalhes do Doador</h2>
+  <div *ngIf="doador">
+    <p><strong>Nome:</strong> {{ doador.nome }}</p>
+    <p><strong>Idade:</strong> {{ doador.idade }} anos</p>
+    <p><strong>Tipo Sanguíneo:</strong> {{ doador.tipoSanguineo }}</p>
+    <p><strong>Sexo:</strong> {{ doador.sexo }}</p>
+    <p><strong>Telefone:</strong> {{ doador.telefone }}</p>
+    <p><strong>Data de Cadastro:</strong> {{ doador.dataCadastro }}</p>
+  </div>
+</div>

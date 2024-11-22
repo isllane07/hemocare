@@ -1,0 +1,22 @@
+<div class="container mt-5 text-center">
+  <h2 class="text-danger">Registrar Doação - Doador: {{ idDoador }}</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group mb-3">
+      <label for="alimentado" class="form-label">Você se alimentou nas últimas 2 horas?</label>
+      <select class="form-control" id="alimentado" name="alimentado" required>
+        <option value="" disabled selected></option>
+        <option value="Sim">Sim</option>
+        <option value="Não">Não</option>
+      </select>
+    </div>
+    <div class="form-group mb-3">
+      <label for="saiuDoPais" class="form-label">Você saiu do país nos últimos 3 meses?</label>
+      <select class="form-control" id="saiuDoPais" name="saiuDoPais" required>
+        <option value="" disabled selected></option>
+        <option value="Sim">Sim</option>
+        <option value="Não">Não</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-danger">Registrar Doação</button>
+  </form>
+</div>

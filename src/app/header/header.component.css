@@ -1,0 +1,27 @@
+
+header {
+  color: #c62828; 
+  text-align: center; 
+  padding: 40px 20px; 
+  border-radius: 10px; 
+  max-width: 100%; 
+  margin: 0 auto; 
+}
+
+
+header h1 {
+  font-size: 3rem; 
+  margin: 10px 0;
+  font-family: 'Arial', sans-serif; 
+}
+
+
+header img {
+  width: 150px; 
+  height: auto; 
+  margin: 20px 0; 
+  border-radius: 10px; 
+
+}
+
+

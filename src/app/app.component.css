@@ -1,0 +1,31 @@
+
+@media (max-width: 576px) {
+  .form-group {
+    margin-bottom: 1rem; 
+
+  .form-control {
+    width: 100%; 
+  }
+}
+
+
+@media (min-width: 577px) {
+  .form-control {
+    max-width: 100%; 
+  }
+
+  .form-group input,
+  .form-group select {
+    width: auto; 
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column; 
+  }
+
+  .form-group label {
+    font-size: 1rem; 
+  }
+}
+}
